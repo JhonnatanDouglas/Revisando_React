@@ -1,11 +1,11 @@
-import EstadoCondensado from "./components/S2-10-Estado_-_Condensando_conhecimentos";
+import FruitsList from "./components/S2-11 - 💪 Atividade - Lista de frutas";
 import "./styles/reset.css";
 import "./styles/styles.css";
 
 function App() {
   return (
     <>
-      <EstadoCondensado />
+      <FruitsList />
     </>
   );
 }
