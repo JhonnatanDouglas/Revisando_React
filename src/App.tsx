@@ -1,11 +1,11 @@
-import UseStateRelativo from "./components/S2-09_Estado_-_Reatividade_na_lógica";
+import EstadoCondensado from "./components/S2-10-Estado_-_Condensando_conhecimentos";
 import "./styles/reset.css";
 import "./styles/styles.css";
 
 function App() {
   return (
     <>
-      <UseStateRelativo />
+      <EstadoCondensado />
     </>
   );
 }
