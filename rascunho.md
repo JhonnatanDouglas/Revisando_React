@@ -25,3 +25,7 @@ https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 
 <!-- ------------------------------------------------------------------ -->
+
+https://fruit-fake-api.onrender.com
+
+<!-- ------------------------------------------------------------------ -->
