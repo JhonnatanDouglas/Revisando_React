@@ -1,4 +1,4 @@
-import RenderizacaoCondicional from "./components/S2-18-Aula-Renderização-condicional";
+import RenderizacaoCondicional from "./components/Sprint-2/S2-18-Aula-Renderização-condicional";
 import "./styles/reset.css";
 import "./styles/styles.css";
 
