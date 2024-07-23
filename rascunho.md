@@ -28,4 +28,19 @@ https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects
 
 https://fruit-fake-api.onrender.com
 
+<!--  -->
+
+https://blog-fake-api.onrender.com/
+https://github.com/Kenzie-Academy-Brasil-Developers/blog-fake-api
+
+```ts
+interface iBlog {
+  id: number;
+  category: string;
+  title: string;
+  content: string;
+  author: string;
+}
+```
+
 <!-- ------------------------------------------------------------------ -->
