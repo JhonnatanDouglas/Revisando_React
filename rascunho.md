@@ -44,3 +44,9 @@ interface iBlog {
 ```
 
 <!-- ------------------------------------------------------------------ -->
+
+https://www.material-tailwind.com/docs/react/installation
+
+<!-- ------------------------------------------------------------------ -->
+
+S3-11-Modal-Lidando_com_modais_no_React
