@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./style.module.css";
 
 interface iModal_1 {
   children: React.ReactNode;
@@ -9,12 +8,12 @@ interface iModal_1 {
 const Modal_1 = ({ children, closeModal }: iModal_1) => {
   return (
     <div
-      className={styles.modalOverlay}
+      className=""
       role="dialog"
     >
-      <div className={styles.modalBox}>
+      <div className="">
         <button
-          className={styles.closeButton}
+          className=""
           onClick={closeModal}
         >
           Fechar
