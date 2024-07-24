@@ -1,4 +1,4 @@
-import React, { KeyboardEvent, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 interface iModal_1 {
   children: React.ReactNode;
@@ -6,14 +6,12 @@ interface iModal_1 {
 }
 
 const Modal_3 = ({ children, closeModal }: iModal_1) => {
-  // tipagem correta para modalRef
   const modalRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleOutClick = (e: MouseEvent) => {
-      // console.log(e.target.value); // não há necessidade de acessar e.target.value para MouseEvent
       if (!modalRef.current?.contains(e.target as Node)) {
-        closeModal(); // aqui, clicando fora irá fechar o modal
+        closeModal();
         console.log("clicou");
       }
     };
@@ -31,7 +29,6 @@ const Modal_3 = ({ children, closeModal }: iModal_1) => {
     const handleKeyDown = (e: globalThis.KeyboardEvent) => {
       console.log(e.key);
       if (e.key === "Escape") {
-        // closeModal();
         buttonRef.current?.click();
       }
     };
@@ -45,20 +42,21 @@ const Modal_3 = ({ children, closeModal }: iModal_1) => {
 
   return (
     <div
-      className=""
+      className="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-75"
       role="dialog"
     >
       <div
-        className=""
+        className="relative w-full max-w-md p-6 overflow-hidden bg-white rounded-lg shadow-lg"
         ref={modalRef}
       >
         <button
-          className=""
+          ref={buttonRef}
+          className="absolute px-3 py-1 text-sm font-medium text-white transition-all duration-300 ease-linear bg-blue-700 rounded-lg right-2 top-2 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           onClick={closeModal}
         >
-          Fechar
+          X
         </button>
-        <p className="text-gray-400">{children}</p>
+        <div className="text-gray-800">{children}</div>
       </div>
     </div>
   );
