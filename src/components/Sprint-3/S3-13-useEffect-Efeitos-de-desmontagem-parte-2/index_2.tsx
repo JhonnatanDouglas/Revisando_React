@@ -7,35 +7,30 @@ interface iModal_1 {
 
 const Modal_3 = ({ children, closeModal }: iModal_1) => {
   const modalRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    const handleOutClick = (e: MouseEvent) => {
-      if (!modalRef.current?.contains(e.target as Node)) {
-        closeModal();
-        console.log("clicou");
-      }
-    };
-
-    window.addEventListener("mousedown", handleOutClick);
-
-    return () => {
-      window.removeEventListener("mousedown", handleOutClick);
-    };
-  }, []);
-
   const buttonRef = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
+    const handleOutClick = (e: MouseEvent) => {
+      console.log(`Isso é o "modalRef.current": ${modalRef.current}`);
+      console.log(`Isso é o "e.target": ${e.target}`);
+      console.log(`----------------------------------------------`);
+
+      if (!modalRef.current?.contains(e.target as Node)) {
+        closeModal();
+      }
+    };
+
     const handleKeyDown = (e: globalThis.KeyboardEvent) => {
-      console.log(e.key);
+      console.log(`Isso é o modalRef.current: ${e.key}`);
       if (e.key === "Escape") {
         buttonRef.current?.click();
       }
     };
 
+    window.addEventListener("mousedown", handleOutClick);
     window.addEventListener("keydown", handleKeyDown);
-
     return () => {
+      window.removeEventListener("mousedown", handleOutClick);
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
