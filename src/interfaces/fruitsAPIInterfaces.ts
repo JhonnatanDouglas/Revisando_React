@@ -15,4 +15,11 @@ interface iNutrition {
   sugar: number;
 }
 
-export type { iFruit, iNutrition };
+interface iFruitAlex {
+  id: number;
+  name: string;
+  category: string;
+  price: number;
+}
+
+export type { iFruit, iNutrition, iFruitAlex };
