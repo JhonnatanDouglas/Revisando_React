@@ -1,3 +1,7 @@
+<!-- Bibliotecas -->
+
+npm i axios
+
 <!-- React aceita apenas metodos imutaveis -->
 
 # map
@@ -74,6 +78,7 @@ const ModalAprendendo = ({ children, closeModal }: iModal_2) => {
         className="relative w-full max-w-md p-6 overflow-hidden bg-white rounded-lg shadow-lg"
       >
         <button
+          className="absolute"
           ref={buttonRef}
           onClick={closeModal}
         >
