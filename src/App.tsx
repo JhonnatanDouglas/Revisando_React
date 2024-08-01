@@ -1,10 +1,17 @@
-import FruitsAPITest from "./components/Sprint-3/S3-15-Introdução-ao-axios";
+import { Link } from "react-router-dom";
+import RoutesMain from "./routes/RoutesMain";
 
 function App() {
   return (
     <>
-      {/* <LocalModal_3 /> */}
-      <FruitsAPITest />
+      <header>
+        <nav>
+          <Link to="/">Ir para Home</Link>
+          <Link to="/contato">Ir para Contato</Link>
+          <Link to="/sobre">Ir para Sobre</Link>
+        </nav>
+      </header>
+      <RoutesMain />
     </>
   );
 }

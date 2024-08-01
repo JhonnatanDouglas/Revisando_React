@@ -9,9 +9,7 @@ const useOutClick = ({ callback }: iUseClick) => {
 
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
-      if (!ref.current?.contains(e.target as Node)) {
-        callback();
-      }
+      if (!ref.current?.contains(e.target as Node)) callback();
     };
 
     window.addEventListener("mousedown", handleClick);

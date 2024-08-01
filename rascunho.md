@@ -2,6 +2,8 @@
 
 npm i axios
 
+npm i react-router-dom
+
 <!-- React aceita apenas metodos imutaveis -->
 
 # map

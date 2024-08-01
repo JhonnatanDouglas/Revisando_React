@@ -11,15 +11,15 @@ const useOutKeyDown = ({ callback, typeKey }: iUseClick) => {
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
-      if ((e.key as unknown) === typeKey) callback();
+      if ((e.key as string) === typeKey) callback();
     };
 
     window.addEventListener("keydown", handleKey);
 
     return () => {
-      window.addEventListener("keydown", handleKey);
+      window.removeEventListener("keydown", handleKey);
     };
-  }, []);
+  }, [callback, typeKey]);
 
   return ref;
 };
